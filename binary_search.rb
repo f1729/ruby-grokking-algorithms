@@ -18,7 +18,7 @@ def binary_search(list, item)
 
   end
 
-  return 'null'
+  return nil
 end
 
 
