@@ -4,7 +4,7 @@ def max_element(list)
   elsif list.length == 1
     return list.first
   else
-    if list.first > max_element(list[1..-1])
+    if list.first >= max_element(list[1..-1])
       return list.first
     else
       return max_element(list[1..-1])
