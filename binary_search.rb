@@ -18,11 +18,11 @@ def binary_search(list, item)
 
   end
 
-  return nil
+  nil
 end
 
 
 my_list = [1, 3, 5, 7, 9]
 
 puts binary_search(my_list, 3) # => 1
-puts binary_search(my_list, -1) # => None
+puts binary_search(my_list, -1) # => nil
