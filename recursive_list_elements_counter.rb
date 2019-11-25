@@ -1,8 +1,8 @@
 def list_elements_counter(list)
   if list.length == 0
-    return 0
+    0
   else
-    return 1 + list_elements_counter(list[1..-1])
+    1 + list_elements_counter(list[1..-1])
   end
 end
 

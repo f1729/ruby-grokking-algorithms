@@ -1,13 +1,13 @@
 def max_element(list)
   if list.length == 0
-    return 0
+    0
   elsif list.length == 1
-    return list.first
+    list.first
   else
     if list.first >= max_element(list[1..-1])
-      return list.first
+      list.first
     else
-      return max_element(list[1..-1])
+      max_element(list[1..-1])
     end
   end
 end

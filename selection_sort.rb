@@ -11,7 +11,7 @@ def findSmallest(arr)
     end
   end
 
-  return smallest_index
+  smallest_index
 end
 
 def selectionSort(arr)
@@ -22,7 +22,7 @@ def selectionSort(arr)
     newArr.append(arr.delete_at(smallest))
   end
   
-  return newArr
+  newArr
 end
 
 print selectionSort([5, 3, 6, 2, 10])

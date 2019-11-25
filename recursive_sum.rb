@@ -1,8 +1,8 @@
 def sum(list)
   if list.length == 0
-    return 0
+    0
   else
-    return list.first + sum(list[1..-1])
+    list.first + sum(list[1..-1])
   end
 end
 
