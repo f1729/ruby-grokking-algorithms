@@ -32,7 +32,6 @@ def dijkstras(graph)
       if (new_cost < $costs[n])
         $costs[n] = new_cost
         $parents[n] = node
-        # change parents
       end
     end
 
