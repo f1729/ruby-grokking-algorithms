@@ -2,7 +2,7 @@ $processed = []
 $Infinity = 1/0.0
 
 $costs = { "a" => 6, "b" => 2, "z" => $Infinity }
-$parents = {}
+$parents = { "a" => "x", "b" => "x", "z" => "" }
 
 def find_lowest_cost_node(costs)
   lowest_cost = $Infinity
@@ -27,10 +27,11 @@ def dijkstras(graph)
     cost_of_node = $costs[node]
     neighbors_costs = graph[node]
 
-    for n in neighbors.keys
+    for n in neighbors_costs.keys
       new_cost = cost_of_node + neighbors_costs[n]
       if (new_cost < $costs[n])
         $costs[n] = new_cost
+        $parents[n] = node
         # change parents
       end
     end
@@ -38,7 +39,7 @@ def dijkstras(graph)
     $processed.append(node)
     node = find_lowest_cost_node($costs)
   end
-  $costs
+  { "parents" => $parents, "costs" => $costs }
 end
 
 
